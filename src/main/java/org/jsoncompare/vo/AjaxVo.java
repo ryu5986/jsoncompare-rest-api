@@ -7,18 +7,15 @@ import lombok.Setter;
 @Setter
 public class AjaxVo<T> {
 
-    private String code;
-    private String msg;
-    private T data;
+    private String message;
+    private T result;
 
-    public AjaxVo(String code, String msg){
-        this.code = code;
-        this.msg = msg;
+    public AjaxVo(String message){
+        this.message = message;
     }
 
-    public AjaxVo(String code, String msg, T data){
-        this.code = code;
-        this.msg = msg;
-        this.data = data;
+    public AjaxVo(String message, T result){
+        this.message = message;
+        this.result = result;
     }
 }

@@ -33,4 +33,8 @@ public class RecordService {
     public void deleteRecord(long jsonIdx){
         recordRepository.deleteById(jsonIdx);
     }
+
+    public Record getRecordByEncryptKey(String encryptKey){
+        return recordRepository.findByEncryptKey(encryptKey);
+    }
 }

@@ -24,10 +24,15 @@ public class Record {
     @Column(nullable = false, columnDefinition = "longtext")
     private String rightData;
 
+    @Column(unique = true, nullable = false, columnDefinition = "longtext")
+    private String encryptKey;
+
+
     @Builder
-    public Record(String leftData, String rightData){
+    public Record(String leftData, String rightData, String encryptKey){
         this.leftData = leftData;
         this.rightData = rightData;
+        this.encryptKey = encryptKey;
 
         LocalDateTime now = LocalDateTime.now();
 

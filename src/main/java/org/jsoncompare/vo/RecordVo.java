@@ -16,9 +16,10 @@ public class RecordVo {
     private String subject;
     private String leftData;
     private String rightData;
+    private String encryptKey;
 
     public Record toEntity(){
-        return Record.builder().leftData(leftData).rightData(rightData).build();
+        return Record.builder().leftData(leftData).rightData(rightData).encryptKey(encryptKey).build();
     }
 
     public RecordVo(Record record){
@@ -26,5 +27,6 @@ public class RecordVo {
         this.subject = record.getSubject();
         this.leftData = record.getLeftData();
         this.rightData = record.getRightData();
+        this.encryptKey = record.getEncryptKey();
     }
 }
