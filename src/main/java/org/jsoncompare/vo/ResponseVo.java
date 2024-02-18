@@ -5,16 +5,16 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class AjaxVo<T> {
+public class ResponseVo<T> {
 
     private String message;
     private T result;
 
-    public AjaxVo(String message){
+    public ResponseVo(String message){
         this.message = message;
     }
 
-    public AjaxVo(String message, T result){
+    public ResponseVo(String message, T result){
         this.message = message;
         this.result = result;
     }
