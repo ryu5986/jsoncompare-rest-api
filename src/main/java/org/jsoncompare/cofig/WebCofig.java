@@ -11,6 +11,6 @@ public class WebCofig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         WebMvcConfigurer.super.addCorsMappings(registry);
         registry.addMapping("/api/**")
-                .allowedOrigins("http://localhost:5173");
+                .allowedOrigins("http://localhost:5173", "http://vue-jsoncompare.s3-website.ap-northeast-2.amazonaws.com/");
     }
 }

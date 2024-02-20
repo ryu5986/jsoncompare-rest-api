@@ -1,13 +1,17 @@
 spring:
   datasource:
+#    driver-class-name: org.mariadb.jdbc.Driver
+#    url: jdbc:mariadb://localhost:3306/star_dev?characterEncoding=UTF-8&serverTimezone=UTC
+#    username: root
+#    password: mariadb
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://localhost:3306/star_dev?characterEncoding=UTF-8&serverTimezone=UTC
+    url: jdbc:mariadb://database-1.cv2aeakiyvpe.ap-northeast-2.rds.amazonaws.com:3306/stardev?characterEncoding=UTF-8&serverTimezone=UTC
     username: root
-    password: mariadb
+    password: gksquf5986
 
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     properties:
       hibernate:
         format_sql: true #To beautify or pretty print the SQL

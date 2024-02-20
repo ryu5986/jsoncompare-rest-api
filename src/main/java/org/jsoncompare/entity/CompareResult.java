@@ -2,18 +2,16 @@ package org.jsoncompare.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class Record {
+public class CompareResult {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long jsonIdx;
+    private long resultIdx;
 
     @Column(nullable = false, columnDefinition = "longtext")
     private String leftData;
@@ -25,7 +23,7 @@ public class Record {
     private String encryptKey;
 
     @Builder
-    public Record(String leftData, String rightData, String encryptKey){
+    public CompareResult(String leftData, String rightData, String encryptKey){
 
         this.leftData = leftData;
         this.rightData = rightData;
