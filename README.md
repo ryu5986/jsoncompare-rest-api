@@ -43,6 +43,9 @@ front-end 쪽으로 진로를 결정하게 되었습니다.
 - Entity 구성에서 현재 프로젝트에서 사용하고 있지는 않지만 추후 기능적으로 키값이 아닌 PK 값으로 가져오는 기능이 생길수도 있다는 가정하에 resultIdx 라는 PK 값을 만들었으며
 - 양쪽 Json Data 는 길이가 길어질 수 있기 때문에 longtext로 컬럼을 구성하였습니다.
 - 암호화 키값은 unique 설정을 주어 중복을 방지했습니다.
+
+
+
 ![entity](https://github.com/ryu5986/jsoncompare-rest-api/assets/66866506/a9201162-ff6a-40cb-b359-1dfeec5e30f0)
 ![erd](https://github.com/ryu5986/jsoncompare-rest-api/assets/66866506/c899ec01-3550-4ffc-8707-c1ece8712588)
 
