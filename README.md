@@ -40,6 +40,11 @@ front-end 쪽으로 진로를 결정하게 되었습니다.
 - Back-end 부분은 Rest-API 구성으로 진행하였으며 기능적으로는 Compare 한 정보를 저장 및 가져오는 기능만 생성하였습니다.
 - SpringBoot 는 익숙하여 사용하였고 구성 패키지는 config, controller, dto, entity, repository, service 로 구성하였습니다. config 에서 CORS 설정 관련 클래스를 만들었으며, dto 와 entity 를 따로 분리하여 관리할 수 있게 구성하였습니다.
 - 기존에 작업을 할 때는 항상 Mybatis 를 사용하여 쿼리를 직접 작성하여 진행했었으나 이번에는 개발의 속도 향상을 위해 Hibernate 를 이용하여 작업하였습니다.
+- Entity 구성에서 현재 프로젝트에서 사용하고 있지는 않지만 추후 기능적으로 키값이 아닌 PK 값으로 가져오는 기능이 생길수도 있다는 가정하에 resultIdx 라는 PK 값을 만들었으며
+- 양쪽 Json Data 는 길이가 길어질 수 있기 때문에 longtext로 컬럼을 구성하였습니다.
+- 암호화 키값은 unique 설정을 주어 중복을 방지했습니다.
+![entity](https://github.com/ryu5986/jsoncompare-rest-api/assets/66866506/a9201162-ff6a-40cb-b359-1dfeec5e30f0)
+![erd](https://github.com/ryu5986/jsoncompare-rest-api/assets/66866506/c899ec01-3550-4ffc-8707-c1ece8712588)
 
 ### URL
 ---
